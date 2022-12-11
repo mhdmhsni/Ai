@@ -1,0 +1,22 @@
+.btn {
+  background-color: transparent;
+  outline: none;
+  border: 3px solid $color-primary;
+  color: $color-primary;
+  font-size: $font-size-large;
+  padding: $padding-default;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  cursor: pointer;
+  transition: all 400ms ease;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $color-primary;
+    color: $color-black;
+  }
+}

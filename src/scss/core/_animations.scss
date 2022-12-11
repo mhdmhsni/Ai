@@ -1,0 +1,20 @@
+@keyframes TitleAnimation {
+  0%,
+  100% {
+    background-color: $color-black;
+    color: $color-black;
+    border: solid 4px $color-black;
+  }
+  50% {
+    background-color: $color-primary;
+    color: $color-black;
+    border: solid 4px $color-primary;
+  }
+}
+
+.title-animation {
+  animation-name: TitleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
