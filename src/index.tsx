@@ -9,16 +9,21 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./routes/Root";
 import Board from "./routes/Board";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Root />,
+    },
+    {
+      path: "/board",
+      element: <Board />,
+    },
+  ],
   {
-    path: "/",
-    element: <Root />,
-  },
-  {
-    path: "/board",
-    element: <Board />,
-  },
-]);
+    basename: "/Ai",
+  }
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
