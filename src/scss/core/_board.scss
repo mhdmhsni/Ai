@@ -1,10 +1,14 @@
 .board {
-  width: 80vw;
-  height: 80vh;
   border: 5px solid $color-primary;
-  padding: 25px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
+  padding: 50px;
+  display: grid;
+  height: 60vh;
+  gap: 50px;
+
+  // each box is 200px by 200px
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
+
+  //  Change  values 👇  to experiment
+  align-content: center;
 }

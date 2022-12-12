@@ -6,7 +6,7 @@ const Root = () => {
   const [playMusic, setPlayMusic] = useState<boolean>(false);
 
   useEffect(() => {
-    setPlayMusic(false);
+    setPlayMusic(true);
   }, []);
 
   return (

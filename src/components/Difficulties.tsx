@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-type DifficultyLevel = "Human" | "Chimpanzee" | "Ai (愛)";
+export type DifficultyLevel = "Human" | "Chimpanzee" | "Ai (愛)";
 
 const Difficulties = () => {
   const [difficulties] = useState<DifficultyLevel[]>([

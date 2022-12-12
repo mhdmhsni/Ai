@@ -23,11 +23,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
-  </React.StrictMode>
-);
+
+// remover <StrictMode></StrictMode> because useEffect was being called twice (due to mounting, dismounting)
+root.render(<RouterProvider router={router}></RouterProvider>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
