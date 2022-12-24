@@ -10,15 +10,6 @@ const Board = () => {
   let [board, setBoard] = useState<Array<number>>([]);
   const [nextNumber, setNextNumber] = useState<number>(1);
   const navigate = useNavigate();
-  const [difficulty, setDifficulty] = useState<DifficultyLevels>("easy");
-  const convertToSeconds = (ms: number) => {
-    const sec = ms / 1000;
-    if (sec < 1) {
-      return `half a second`;
-    }
-
-    return `${sec} seconds`;
-  };
   useEffect(() => {
     setBoard(generateBoard(gameConfig.boardsCells));
   }, []);
@@ -26,7 +17,6 @@ const Board = () => {
   const hideAfterTimeout = useCallback(() => {
     const url = new URL(window.location.href);
     const difficulty = url.searchParams.get("difficulty")! as DifficultyLevels;
-    setDifficulty(difficulty);
     return () =>
       setTimeout(() => {
         setRevealed(false);
@@ -50,6 +40,7 @@ const Board = () => {
         ...board.slice(index + 1),
       ];
       setBoard(updatedBoard);
+      clearTimeout(timeout);
     }, 100);
   };
 
@@ -75,30 +66,16 @@ const Board = () => {
   };
 
   return (
-    <>
-      {/*<span style={{*/}
-      {/*  position: 'fixed',*/}
-      {/*  top: '10px',*/}
-      {/*  left: '10px',*/}
-      {/*  fontSize: 'calc(10px + 1vmin)',*/}
-      {/*  textTransform: 'none',*/}
-      {/*  background: 'rgba(255, 255, 255, 0.1)',*/}
-      {/*  padding: '.2rem .9rem',*/}
-      {/*  borderRadius: '30px',*/}
-      {/*  whiteSpace: 'pre-wrap',*/}
-      {/*  fontWeight: "bold"*/}
-      {/*}}>You have {convertToSeconds(mapDifficultyToTime(difficulty))} to memorize the location of each number in ascending order!</span>*/}
-      <div className="board">
-        {board.map((el, key) => (
-          <Card
-            cardClickHandler={clickHandler}
-            cardNumber={el}
-            revealed={revealed}
-            key={key}
-          />
-        ))}
-      </div>
-    </>
+    <div className="board">
+      {board.map((el, key) => (
+        <Card
+          cardClickHandler={clickHandler}
+          cardNumber={el}
+          revealed={revealed}
+          key={key}
+        />
+      ))}
+    </div>
   );
 };
 

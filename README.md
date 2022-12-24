@@ -2,7 +2,7 @@
 
 Try to memorize the location of numbers 1-9 in ascending order in a certain amount of time.
 
-You can test the game from [Ai (愛)]('https://mhdmhsni.github.io/Ai')
+You can test the game from [here](https://mhdmhsni.github.io/Ai)
 
 ## Background
 
