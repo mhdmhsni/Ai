@@ -1,19 +1,67 @@
 .card {
-  width: 80px;
-  height: 80px;
+  width: calc(20px + 6vmin);
+  height: calc(20px + 6vmin);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: calc(20px + 2vmin);
   user-select: none;
   pointer-events: none;
+  position: relative;
+  transition: all 500ms ease;
+  border-radius: 15px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparentize($color-primary, 0.8);
+    top: 0;
+    left: 0;
+    transition: all 300ms ease;
+    transform: rotateY(90deg);
+    transform-origin: bottom center;
+    border-radius: 15px;
+
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparentize($color-primary, 0.4);
+    top: 0;
+    left: 0;
+    transition: all 400ms ease;
+    transform: rotateY(90deg);
+    transform-origin: bottom center;
+    border-radius: 15px;
+
+  }
 
   &-hidden {
     background-color: $color-primary;
     pointer-events: all;
+    transition: all 500ms ease;
+
+    &:after {
+      transform: rotateY(0);
+    }
+
+    &:before {
+      transform: rotateY(0);
+    }
   }
 
   &:hover {
     cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    cursor: pointer;
+    transform: scale(0.9);
   }
 }

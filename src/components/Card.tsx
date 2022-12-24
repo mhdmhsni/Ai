@@ -1,9 +1,4 @@
-import { FC, MouseEventHandler, useEffect, useState } from "react";
-
-interface CardPositions {
-  x: number;
-  y: number;
-}
+import { FC, MouseEventHandler } from "react";
 
 type defaultProps = {
   /**
@@ -14,7 +9,7 @@ type defaultProps = {
 
 type Props = {
   /**
-   * number to render as cards's value
+   * number to render as card's value
    */
   cardNumber: number;
 

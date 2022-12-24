@@ -1,13 +1,13 @@
+$grid-col-size: calc(10px + 6vmin);
+
 .board {
-  border: 5px solid $color-primary;
-  padding: 50px;
   display: grid;
-  height: 60vh;
-  gap: 50px;
+  gap: 20px;
+  max-height: 60vh;
+  max-width: 95vw;
 
   // each box is 200px by 200px
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-columns: $grid-col-size $grid-col-size $grid-col-size $grid-col-size $grid-col-size $grid-col-size;
 
   //  Change  values 👇  to experiment
   align-content: center;

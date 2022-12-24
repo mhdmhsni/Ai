@@ -1,22 +1,24 @@
 .btn {
-  background-color: transparent;
+  background-color: $color-primary;
   outline: none;
-  border: 3px solid $color-primary;
-  color: $color-primary;
+  border: none;
+  border-radius: 30px;
+  color: $color-black;
   font-size: $font-size-large;
   padding: $padding-default;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: .5rem;
   cursor: pointer;
   transition: all 400ms ease;
   font-weight: bold;
   text-transform: uppercase;
+  width: max-content;
 
   &:hover {
-    background: $color-primary;
-    color: $color-black;
+    background: $color-black;
+    color: $color-primary;
   }
 }

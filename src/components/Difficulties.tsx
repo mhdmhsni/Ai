@@ -1,29 +1,25 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-
-export type DifficultyLevel = "Human" | "Chimpanzee" | "Ai (愛)";
+import {INITIAL_DIFFICULTY_LEVELS} from "../utils/static";
+import {Difficulty, DifficultyLevels} from "../utils/types";
 
 const Difficulties = () => {
-  const [difficulties] = useState<DifficultyLevel[]>([
-    "Human",
-    "Chimpanzee",
-    "Ai (愛)",
-  ]);
+  const [difficulties] = useState<Difficulty[]>(INITIAL_DIFFICULTY_LEVELS);
 
   const navigate = useNavigate();
-  const startGame = (level: DifficultyLevel) => {
+  const startGame = (level: DifficultyLevels) => {
     navigate(`board?difficulty=${level}`);
   };
 
   return (
-    <div className="d-flex justify-center align-items-center">
+    <div className="difficulties-list-wrapper">
       {difficulties.map((element, key) => (
         <button
-          onClick={() => startGame(element)}
+          onClick={() => startGame(element.difficultyLevel)}
           className="btn btn-difficulty"
           key={key}
         >
-          {element}
+          {element.title}
         </button>
       ))}
     </div>
