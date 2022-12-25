@@ -4,12 +4,12 @@ export const INITIAL_DIFFICULTY_LEVELS: Difficulty[] = [
     {
         title: "Human",
         difficultyLevel: "easy",
-        revealTimeoutDuration: 15000
+        revealTimeoutDuration: 10000
     },
     {
         title: "Chimpanzee",
         difficultyLevel: "hard",
-        revealTimeoutDuration: 8000
+        revealTimeoutDuration: 5000
     },
     {
         title: "Ai (愛)",

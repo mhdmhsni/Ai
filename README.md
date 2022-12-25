@@ -13,6 +13,6 @@ You can test the game from [here](https://mhdmhsni.github.io/Ai)
 
 ## Game Difficulty levels:
 
-- `Human` -> `Easy` : You have 15 seconds to memorize
-- `Chimpanzee` -> `Hard` : You have 8 seconds to memorize
+- `Human` -> `Easy` : You have 10 seconds to memorize
+- `Chimpanzee` -> `Hard` : You have 5 seconds to memorize
 - `Ai (愛)` -> `impossible` : Ypu have only half a second to memorize
