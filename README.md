@@ -4,6 +4,8 @@ Try to memorize the location of numbers 1-9 in ascending order in a certain amou
 
 You can test the game from [here](https://mhdmhsni.github.io/Ai)
 
+![Deploy](https://github.com/mhdmhsni/Ai/actions/workflows/deploy-to-pages.yml/badge.svg)
+
 ## Background
 
 - The idea for this simple game came from a [YouTube](https://youtu.be/ktkjUjcZid0) video with the same name
