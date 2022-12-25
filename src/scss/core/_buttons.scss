@@ -10,15 +10,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: .5rem;
+  margin: 0.5rem;
   cursor: pointer;
   transition: all 400ms ease;
   font-weight: bold;
   text-transform: uppercase;
   width: max-content;
+  position: relative;
+
+  &::after {
+    content: "";
+    border-radius: 30px;
+    @include OverlayLayers();
+  }
+
+  &::before {
+    content: "";
+    border-radius: 30px;
+    @include OverlayLayers();
+  }
 
   &:hover {
     background: $color-black;
     color: $color-primary;
+    transition: all 500ms ease;
+
+    &:after {
+      transform: rotateY(0);
+    }
+
+    &:before {
+      transform: rotateY(0);
+    }
   }
 }

@@ -1,4 +1,16 @@
 
+## 0.2.2
+
+### Fixed
+
+- Improved the visual effects.
+
+## 0.2.1
+
+### Removed
+
+- github workflow did not work as intended, and has been removed for now
+
 ## 0.2.0
 
 ### Added

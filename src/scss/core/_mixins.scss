@@ -1,0 +1,11 @@
+@mixin OverlayLayers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparentize($color-primary, 0.8);
+  top: 0;
+  left: 0;
+  transition: all 300ms ease;
+  transform: rotateY(90deg);
+  transform-origin: bottom center;
+}
