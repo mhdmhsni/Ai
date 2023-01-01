@@ -36,19 +36,14 @@
       transform: rotateY(0);
     }
 
-    >.card-text {
+    > .card-text {
       display: none;
       opacity: 0;
     }
-  }
 
-  &:hover {
-    cursor: pointer;
-    background-color: darken($color-primary, 50%);
-  }
-
-  &:active {
-    cursor: pointer;
-    transform: scale(0.9);
+    &:hover {
+      cursor: pointer;
+      box-shadow: 6px 6px 0 0 darken($color-primary, 75%);
+    }
   }
 }
