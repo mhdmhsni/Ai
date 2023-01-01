@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import {INITIAL_DIFFICULTY_LEVELS} from "../utils/static";
-import {Difficulty, DifficultyLevels} from "../utils/types";
+import { INITIAL_DIFFICULTY_LEVELS } from "../utils/static";
+import { Difficulty, DifficultyLevels } from "../utils/types";
 
-const Difficulties = () => {
+const DifficultyList = () => {
   const [difficulties] = useState<Difficulty[]>(INITIAL_DIFFICULTY_LEVELS);
 
   const navigate = useNavigate();
@@ -26,4 +26,4 @@ const Difficulties = () => {
   );
 };
 
-export default Difficulties;
+export default DifficultyList;

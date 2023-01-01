@@ -1,4 +1,4 @@
-import Difficulties from "../components/Difficulties";
+import DifficultyList from "../components/DifficultyList";
 import Title from "../components/Title";
 
 const Root = () => {
@@ -6,7 +6,7 @@ const Root = () => {
     <>
       <Title />
       <h2 className="text-center">CHOOSE THE DIFFICULTY</h2>
-      <Difficulties />
+      <DifficultyList />
     </>
   );
 };

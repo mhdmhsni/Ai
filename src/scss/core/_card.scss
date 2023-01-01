@@ -14,13 +14,13 @@
   &::after {
     content: "";
     border-radius: 15px;
-    @include OverlayLayers();
+    @include OverlayLayer();
   }
 
   &::before {
     content: "";
     border-radius: 15px;
-    @include OverlayLayers();
+    @include OverlayLayer();
   }
 
   &-hidden {
@@ -35,12 +35,16 @@
     &:before {
       transform: rotateY(0);
     }
+
+    >.card-text {
+      display: none;
+      opacity: 0;
+    }
   }
 
   &:hover {
     cursor: pointer;
     background-color: darken($color-primary, 50%);
-    color: darken($color-primary, 50%);
   }
 
   &:active {

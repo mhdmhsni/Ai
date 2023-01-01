@@ -4,7 +4,8 @@
   border: none;
   border-radius: 30px;
   color: $color-black;
-  font-size: $font-size-large;
+  font-size: $font-size-normal;
+  font-family: $font-family;
   padding: $padding-default;
   height: 50px;
   display: flex;
@@ -13,7 +14,6 @@
   margin: 0.5rem;
   cursor: pointer;
   transition: all 400ms ease;
-  font-weight: bold;
   text-transform: uppercase;
   width: max-content;
   position: relative;
@@ -21,13 +21,13 @@
   &::after {
     content: "";
     border-radius: 30px;
-    @include OverlayLayers();
+    @include OverlayLayer();
   }
 
   &::before {
     content: "";
     border-radius: 30px;
-    @include OverlayLayers();
+    @include OverlayLayer();
   }
 
   &:hover {

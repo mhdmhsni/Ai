@@ -22,7 +22,7 @@ const Card: FC<Props> = ({ revealed = true, cardNumber, cardClickHandler }) => {
       onClick={(e) => cardClickHandler(e)}
       className={`card ${!revealed && cardNumber ? "card-hidden" : ""}`}
     >
-      {cardNumber ? cardNumber : ""}
+      <span className="card-text">{cardNumber ? cardNumber : ""}</span>
     </div>
   );
 };

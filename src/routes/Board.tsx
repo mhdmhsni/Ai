@@ -49,8 +49,10 @@ const Board = () => {
   };
 
   const clickHandler = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    const targetElement = e.currentTarget;
-    const num = parseInt(targetElement.innerText, 10);
+    const targetElement = e.currentTarget as HTMLDivElement;
+    const cardText = targetElement.getElementsByClassName('card-text')[0] as HTMLSpanElement;
+    const cardValue = cardText.innerText;
+    const num = parseInt(cardValue, 10);
     if (num === nextNumber) {
       revealCorrectCard(targetElement);
       removeTheCardFromBoard(num);
