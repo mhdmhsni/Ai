@@ -1,4 +1,16 @@
 
+## 0.3.0
+
+### Fixed
+
+- Fixed an issue with cards being revealed on mouse-down event.
+- Fixed an issue with colors not being matched
+
+### Added
+
+- Added new logo and favicon
+- Set "PressStart" as the default font
+
 ## 0.2.2
 
 ### Fixed
