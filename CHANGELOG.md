@@ -1,3 +1,10 @@
+## 0.3.1
+
+### Fixed
+
+- Add fallback for 404 error on github-pages
+- Match theme-color with primary-color
+
 
 ## 0.3.0
 
